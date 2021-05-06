@@ -67,7 +67,7 @@ void loop() {
 
    delay(1000);
    testtext(c);
-   reactOnTemp(c,260);
+   reactOnTemp(c,195); // change 195 to what temperature you want to hold
 }
 
 

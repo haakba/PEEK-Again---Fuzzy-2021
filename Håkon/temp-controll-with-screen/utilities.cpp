@@ -6,7 +6,7 @@ bool trigger = false;
 //unsigned long previousTime = 0;
 
 
-long onTime = 3000;
+long onTime = 3500;
 long offTime = 5000;
 
 unsigned long onTimestamp = 0;
@@ -15,7 +15,7 @@ long offTimestamp = -offTime;
 
 void reactOnTemp(double temperature, double maxTemp) {
 
-  if(!trigger && temperature<175 && (millis() - offTimestamp) >= offTime)
+  if(!trigger && temperature<(maxTemp-10) && (millis() - offTimestamp) >= offTime)
   {
     trigger = true;
     onTimestamp = millis();
